@@ -1,26 +1,31 @@
-import React, { useState } from 'react'
 
 import "./contacts.scss";
 
 function Contacts() {
-    const [message,setMessage] = useState(false);
-    const handleSubmit = (e) =>{
-        e.preventDefault();
-        setMessage(true);
-    }
+
     return (
         <div className="contacts" id="contacts">
             <div className="left">
                 <img src="assets/shake.svg" alt="" />
             </div>
             <div className="right">
-                <h2>Contact.</h2>
-                <form onSubmit={handleSubmit}>
-                    <input type="email" placeholder="Email"/>
-                    <textarea placeholder="Message"></textarea>
-                    <button type="submit">Send</button>
-                    {message && <span>Thanks, I'll reply ASAP :)</span>}
-                </form>
+                <h1 className="contactHeader">Contact Me</h1>
+                <div className="contactWrapper">
+                    <div className="contactContent">
+                        <span><strong>Email:</strong></span>
+                        <span>jibupjacob@gmail.com</span>
+                    </div>
+                    <div className="contactContent">
+                        <span><strong>LinkedIn:</strong></span>
+                        <span><a href="https://www.linkedin.com/in/jibujacob07/" 
+                                rel="noreferrer"
+                            target="_blank">
+                                https://www.linkedin.com/in/jibujacob07/
+                            </a>
+                        </span>
+                    </div>
+                    
+                </div>
             </div>
             
         </div>

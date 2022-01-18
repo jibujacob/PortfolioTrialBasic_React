@@ -2,51 +2,23 @@
 
 .intro {
   background-color: white;
+  // background-color: $mainColor;
+  color: black;
   display: flex;
-  color: $mainColor;
-  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: relative;
 
   @include mobile {
     flex-direction: column;
     align-items: center;
   }
 
-  .left {
-    flex: 1;
-    overflow: hidden;
-
-    .imgContainer {
-      width: 700px;
-      height: 700px;
-      background-color: crimson;
-      border-radius: 50%;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      float: right;
-      position: relative;
-      overflow: hidden;
-
-      @include mobile {
-        align-items: flex-start;
-        width: 300px;
-        height: 300px;
-      }
-
-      img {
-        height: 90%;
-        position: absolute;
-        bottom: -5px;
-
-        @include mobile {
-        }
-      }
-    }
-  }
-
   .right {
-    flex: 1;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     .wrapper {
       width: 100%;
@@ -55,34 +27,30 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      overflow: hidden;
+      align-items: center;
 
       @include mobile {
         padding-left: 0px;
         align-items: center;
-        justify-content: center;
-        margin-top: -30px;
       }
 
       h1 {
-        font-size: 60px;
+        font-size: 70px;
         margin: 10px 0;
+        // font-weight: 500;
 
         @include mobile {
-          font-size: 40px;
+          font-size: 60px;
         }
       }
 
       h2 {
-        font-size: 35px;
+        font-size: 30px;
+        // font-weight: 400;
       }
 
       h3 {
         font-size: 30px;
-
-        @include mobile {
-          font-size: 20px;
-        }
 
         span {
           font-size: inherit;
@@ -107,7 +75,6 @@
     a {
       position: absolute;
       bottom: 10px;
-      left: 40%;
 
       img {
         width: 30px;

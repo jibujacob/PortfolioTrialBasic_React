@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import "./portfolio.scss";
 import PortfolioList from "../portfolioList/PortfolioList.jsx";
-import {featuredPortfolio,webPortfolio,mobilePortfolio,designPortfolio,contentPortfolio}
+import {featuredPortfolio,webPortfolio,mobilePortfolio,designPortfolio}
 from "../../dummydata.js";
 
 function Portfolio() {
@@ -25,10 +25,6 @@ function Portfolio() {
             id:"design",
             title:"Design"
         },
-        {
-            id:"branding",
-            title:"Branding"
-        }
     ]
 
     useEffect(()=>{
@@ -45,9 +41,6 @@ function Portfolio() {
             case "design":
                 setData(designPortfolio);
                 break;
-            case "branding":
-                setData(contentPortfolio);
-                break;
             default:
                 setData(featuredPortfolio);
         }
@@ -59,7 +52,7 @@ function Portfolio() {
             <h1>Portfolio</h1>
             <ul>
                 {list.map((item) => (
-                    <PortfolioList id ={item.id} title={item.title} 
+                    <PortfolioList key={item.id} id ={item.id} title={item.title} 
                     active={selected === item.id}
                     setSelected ={setSelected}
                     />
@@ -67,7 +60,7 @@ function Portfolio() {
             </ul>
             <div className="container">
                 {data.map( (item) => (
-                    <div  className="item">
+                    <div  key={item.id} className="item">
                         <img src={item.img} alt="" />
                         <h3>{item.title}</h3>
                     </div>
