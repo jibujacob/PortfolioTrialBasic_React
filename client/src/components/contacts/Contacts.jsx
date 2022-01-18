@@ -15,13 +15,18 @@ function Contacts() {
                         <span><strong>Email:</strong></span>
                         <span>jibupjacob@gmail.com</span>
                     </div>
-                    <div className="contactContent">
-                        <span><strong>LinkedIn:</strong></span>
+                    <div className="contactContentIcon">
                         <span><a href="https://www.linkedin.com/in/jibujacob07/" 
                                 rel="noreferrer"
                             target="_blank">
-                                https://www.linkedin.com/in/jibujacob07/
-                            </a>
+                                <i className="fab fa-linkedin"></i>
+                            </a>         
+                        </span>
+                        <span><a href="https://github.com/jibujacob" 
+                                rel="noreferrer"
+                            target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>         
                         </span>
                     </div>
                     
