@@ -14,8 +14,9 @@
     },
     {
       id: 3,
-      title: "Web E-commerce Design",
-      img: "https://cdn.dribbble.com/users/3637068/screenshots/15467010/media/69a3279182b75365013fe285733d1122.png?compress=1&resize=1200x900",
+      title: "Branding SPA",
+      img: "/assets/Branding_SPA.png",
+      link:"https://jpj-branding-template.herokuapp.com/"
     },
     {
       id: 4,
