@@ -2,13 +2,15 @@
   export const webPortfolio = [
     {
       id: 1,
-      title: "Web Social Media App",
-      img: "https://cdn.dribbble.com/users/5031392/screenshots/15467520/media/c36b3b15b25b1e190d081abdbbf947cf.png?compress=1&resize=1200x900",
+      title: "Frontend Mentor Challenges",
+      img: "/assets/frontendMentorChallenges.png",
+      link:"https://jpj-frontendmentor-solutions.herokuapp.com/"
     },
     {
       id: 2,
-      title: "Web Rampa UI Design",
-      img: "https://cdn.dribbble.com/users/3967258/screenshots/15463803/media/4fddb9a2caf3b3bd634060f706a91e73.png?compress=1&resize=1200x900",
+      title: "Blog Site using Microservices",
+      img: "/assets/blog-microservices.png",
+      link: "https://github.com/jibujacob/Blog_MERN"
     },
     {
       id: 3,
