@@ -25,7 +25,7 @@ function Contacts() {
                         <span><a href="https://github.com/jibujacob" 
                                 rel="noreferrer"
                             target="_blank">
-                                <i class="fab fa-github"></i>
+                                <i className="fab fa-github"></i>
                             </a>         
                         </span>
                     </div>

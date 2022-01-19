@@ -2,47 +2,39 @@ import React, { useEffect, useState } from 'react'
 
 import "./portfolio.scss";
 import PortfolioList from "../portfolioList/PortfolioList.jsx";
-import {featuredPortfolio,webPortfolio,mobilePortfolio,designPortfolio}
+import {webPortfolio,dataengineeringPortfolio}
 from "../../dummydata.js";
 
 function Portfolio() {
-    const [selected,setSelected] = useState("featured");
+    const [selected,setSelected] = useState("web");
     const [data,setData] = useState([]);
     const list =[
-        {
-            id:"featured",
-            title:"Featured"
-        },
+        // {
+        //     id:"featured",
+        //     title:"Featured"
+        // },
         {
             id:"web",
-            title:"Web App"
+            title:"Responsive Web App"
         },
         {
-            id:"mobile",
-            title:"Mobile App"
-        },
-        {
-            id:"design",
-            title:"Design"
+            id:"dataengineering",
+            title:"Data Engineering"
         },
     ]
 
     useEffect(()=>{
         switch (selected){
-            case "featured":
-                setData(featuredPortfolio);
-                break;
             case "web":
                 setData(webPortfolio);
                 break;
-            case "mobile":
-                setData(mobilePortfolio);
-                break;
-            case "design":
-                setData(designPortfolio);
+            case "dataengineering":
+                setData(dataengineeringPortfolio);
                 break;
             default:
-                setData(featuredPortfolio);
+                setData(webPortfolio);
+                break;
+
         }
     },[selected]);
 
@@ -60,10 +52,13 @@ function Portfolio() {
             </ul>
             <div className="container">
                 {data.map( (item) => (
-                    <div  key={item.id} className="item">
-                        <img src={item.img} alt="" />
-                        <h3>{item.title}</h3>
-                    </div>
+                    <a  key={item.id} href={item.link} rel="noreferrer"
+                            target="_blank">
+                        <div className="item">
+                            <img src={item.img} alt="" />
+                            <h3>{item.title}</h3>
+                        </div>
+                    </a>
                 ))}
             </div>
             
